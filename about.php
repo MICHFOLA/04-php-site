@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
 
 $pageTitle = 'About';
+require_once __DIR__ . '/includes/functions.php';
 require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/includes/data.php';
 require_once __DIR__ . '/includes/header.php';
 ?>
 
@@ -32,6 +35,21 @@ require_once __DIR__ . '/includes/header.php';
                 <p>A warm, thoughtful experience from first look to final choice.</p>
             </article>
         </div>
+        <section class="team-section" aria-labelledby="team-heading">
+            <div class="section-heading">
+                <p class="eyebrow">Meet the team</p>
+                <h2 id="team-heading">The people behind Folacrown.</h2>
+            </div>
+            <div class="team-grid">
+                <?php foreach ($team as $member): ?>
+                    <article class="team-card">
+                        <h3><?= e($member['name']) ?></h3>
+                        <p class="team-role"><?= e($member['role']) ?></p>
+                        <p><?= e($member['bio']) ?></p>
+                    </article>
+                <?php endforeach; ?>
+            </div>
+        </section>
     </div>
 </section>
 

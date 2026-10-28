@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
 
 $pageTitle = 'Services';
+require_once __DIR__ . '/includes/functions.php';
 require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/includes/data.php';
 require_once __DIR__ . '/includes/header.php';
 ?>
 
@@ -9,33 +12,15 @@ require_once __DIR__ . '/includes/header.php';
     <div class="container">
         <p class="eyebrow">Our services</p>
         <h1>Discover your own kind of style.</h1>
-        <p>Explore our collections and styling services, with thoughtful options for everyday and special occasions.</p>
+        <p>Explore our fashion collections and styling services, with thoughtful options for everyday and special occasions.</p>
     </div>
 </section>
 
 <section class="section">
-    <div class="container service-list">
-        <article class="service-item">
-            <span class="card-number">01</span>
-            <div>
-                <h2>Signature collection</h2>
-                <p>Explore a considered selection of fashion pieces designed to bring character to your wardrobe. Find versatile favourites, distinctive details, and new inspiration for everyday dressing.</p>
-            </div>
-        </article>
-        <article class="service-item">
-            <span class="card-number">02</span>
-            <div>
-                <h2>Occasion wear</h2>
-                <p>Discover outfits for celebrations, formal events, and the moments you want to remember. Our team can help you explore options and find a look that suits the occasion and your personal taste.</p>
-            </div>
-        </article>
-        <article class="service-item">
-            <span class="card-number">03</span>
-            <div>
-                <h2>Personal styling</h2>
-                <p>Looking for a fresh direction or the finishing touches to an outfit? Get individual guidance on colours, silhouettes, and pieces that work together to express your style.</p>
-            </div>
-        </article>
+    <div class="container card-grid">
+        <?php foreach ($services as $service): ?>
+            <?= renderServiceCard($service) ?>
+        <?php endforeach; ?>
     </div>
 </section>
 

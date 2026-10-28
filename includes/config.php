@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 $siteName = 'Folacrown Fashion House';
 $tagline = 'Distinctive style, thoughtfully made.';

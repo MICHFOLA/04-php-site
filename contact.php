@@ -1,6 +1,8 @@
 <?php
+declare(strict_types=1);
 
 $pageTitle = 'Contact';
+require_once __DIR__ . '/includes/functions.php';
 require_once __DIR__ . '/includes/config.php';
 require_once __DIR__ . '/includes/header.php';
 ?>
@@ -18,8 +20,8 @@ require_once __DIR__ . '/includes/header.php';
         <div>
             <h2>We'd love to hear from you.</h2>
             <p>For questions about our pieces or styling, send us an email and our team will be happy to help.</p>
-            <a class="contact-email" href="mailto:<?= htmlspecialchars($contactEmail, ENT_QUOTES, 'UTF-8') ?>">
-                <?= htmlspecialchars($contactEmail, ENT_QUOTES, 'UTF-8') ?>
+            <a class="contact-email" href="mailto:<?= e($contactEmail) ?>">
+                <?= e($contactEmail) ?>
             </a>
         </div>
         <aside class="contact-note">
