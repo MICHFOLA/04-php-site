@@ -44,6 +44,13 @@ $services = [
         'price' => 20000.0,
         'icon' => '🪡',
     ],
+    [
+        'slug' => 'body-type-consultation',
+        'title' => 'Body type consultation',
+        'description' => 'Get personalized guidance on silhouettes, fits, and styles that complement your shape and help you feel confident.',
+        'price' => 18000.0,
+        'icon' => '👚',
+    ],
 ];
 
 $team = [
